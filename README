@@ -27,5 +27,5 @@
   folder_id: "" //mandatory if you want to upload file to any specific folder
 }
 
-
-
+# Before hitting that api, make sure that you provide the access to client_email specified in drive-api-keys.json file to access those file.
+# Or else it will throw file not found error
