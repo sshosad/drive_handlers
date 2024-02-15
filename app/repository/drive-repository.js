@@ -40,7 +40,7 @@ async function downloadFileFromDrive(fileId, jwtAuth, destinationPath) {
 }
 
 // function to upload file to drive
-async function uploadFileToDrive(jwtAuth, filePath) {
+async function uploadFileToDrive(jwtAuth, filePath, folderId) {
     // getting drive
     const drive = google.drive({  version: 'v3', auth: jwtAuth })
 
@@ -58,14 +58,14 @@ async function uploadFileToDrive(jwtAuth, filePath) {
         requestBody: {
             name: 'test_upload_' + Math.floor(Math.random() * 1000000000) + extension,
             // parents is optional, if we provide FOLDER_ID it will insert file into specified folder, else to users drive
-            parents: ['12PgiKh-jNUJS-RffzWhqRrtOurb7OxXm']
+            parents: [folderId]
         }
 
     })
 }
 
 // MASTER-FUNCTION
-async function downloadAndUploadVideoFileToDrive(fileId) {
+async function downloadAndUploadVideoFileToDrive(fileId, folderId) {
     // Path to store downloaded file
     const filePath = config.storage_path + Math.floor(Math.random() * 1000000000) + '.pdf'
 
@@ -77,7 +77,7 @@ async function downloadAndUploadVideoFileToDrive(fileId) {
     await downloadFileFromDrive(fileId, jwtAuth, filePath)
 
     // uploading file to drive
-    await uploadFileToDrive(jwtAuth, filePath)
+    await uploadFileToDrive(jwtAuth, filePath, folderId)
 }
 
 module.exports = {
