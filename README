@@ -1,0 +1,12 @@
+# This project will help you to download and upload files from the google drive
+
+# Once aftr clone this project, you need to create storage and .env folder in project root level
+
+# Before ru this project, Specify the port and storage folder path as specified below
+# PORT_NUMBER = <AVAILABLE_PORT_NUMBER>
+# STORAGE_PATH = <PATH_OF THE FOLDER_WHICH_YOU_WNAT_TO_STORE_THE_DOWNLOADED_FILE>
+
+#To install dependencies npm i
+
+#To run the project npm start
+
