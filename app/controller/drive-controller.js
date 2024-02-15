@@ -3,7 +3,7 @@ const driveRepository = require('../repository/drive-repository')
 async function downloadAndUploadVideoFileToDrive(req, res) {
     try {
         // Destructuring request body
-        let { file_id, url } = req.body
+        let { file_id, url, folder_id } = req.body
 
         // Validating required parameters
         if(!file_id && !url) {
@@ -24,7 +24,7 @@ async function downloadAndUploadVideoFileToDrive(req, res) {
         }
 
         //calling repo funtion for requires ops
-        await driveRepository.downloadAndUploadVideoFileToDrive(file_id)
+        await driveRepository.downloadAndUploadVideoFileToDrive(file_id, folder_id)
 
         res.send({ status: 'success', message: 'Operation performed successfully' })
 
