@@ -6,7 +6,26 @@
 # PORT_NUMBER = <AVAILABLE_PORT_NUMBER>
 # STORAGE_PATH = <PATH_OF THE FOLDER_WHICH_YOU_WNAT_TO_STORE_THE_DOWNLOADED_FILE>
 
-#To install dependencies npm i
+# To install dependencies npm i
 
+# To use this project, you need to create a google api keys to access the google drive
+# Visit https://console.cloud.google.com/ to register and get api keys for google drive api's
+
+# Once you get the google api keys .json file just paste the json object in the drive-api-keys.json file under app/auth folder
+
+# Now Project is ready to run
 #To run the project npm start
+
+# Once you hit the above command, you will get a console log by saying that "App is running on port <PORT_NUMBER_SPECIFIED_IN_DOT_ENV>"
+
+# To access the download-upload api use below api route and api body
+# http://localhost:<PORT_NUMBER>/api/drive/download-upload
+# among url and file_id any one is mandatory
+#{
+  url:"" // url of the drive file to be download
+  file_id: "" // insted of url you can pass the file if to download
+  folder_id: "" //mandatory if you want to upload file to any specific folder
+}
+
+
 
