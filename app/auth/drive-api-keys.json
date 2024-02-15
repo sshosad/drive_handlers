@@ -1,14 +1,5 @@
 {
-    "type": "service_account",
-    "project_id": "lunar-inn-414318",
-    "private_key_id": "a186811b0b2ce23a4a865a4ff0fa9673ef4f5113",
-    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDbeqHh0CT/zAGo\ncqF0w+waeUMLrPhzRX0KV78VpeZ7YkBiYntBQ2cJ51Ozc8B8KBIvR33/Ai1A1ZpS\nx3FaIlVcrkD1rDd1jbrVxJK/JAzmMhRQv5pAqV1ObkyY6pyHHI1w7idcGI++tNGo\n1niCKcRyK8QD3CLQMz3pL2lsxtbZs9lndA8OemhBdnS3LjRMgJF14Ex13feVm58h\nf/8IYrqqHKaM3I57+4T+5kW17D+4l8+SbLtUQvis9rHUdcASpoih+fKrZlTNQw41\nbhRCTUKjHjRWDuvXsdw1NwXc7/Tu4J23WmtvDK/p5UfQzA7dzUDOLEBuNGn1Xk4J\nUV1CuakfAgMBAAECggEAXEo25COIS1/XmqOJLPZtw7wV60TyvFYN/Fllao72Wg+4\njyZmOc1D+LAjTCRyXkLjUqo3WxHpQYgQepqPGZ2yU2SawDOIpo/Qbq9YHbPlEK8i\nR8op7OLK734GC48r/syM1V3vgxR47XJPbzWwOtuhVXj91bmtkeraL8HWDP2XvrbQ\nWGVxC13JFQVbQ4dvlUxAYqy2CStHlO1+oW5dnkaoDEbiylIGIOv97IvS+zs/SVsy\nZjXeHpIix7wdy+Ip9eI87QiZfLWSO7DQYeUcOfTsO/zlDfKX5pW4n2XEJAATVl/0\n683zB222d4x3KRG62QKWmsCv4uOdOHzXmey2LAw5UQKBgQDz3+HpMYjbdqb3hN93\noPcSy+MswEaSiIkrqHOl7LQa+sVDJVx28kW0KtATp6n/lHhT11LPP38McCX2WTe2\nUM6MSBnHHSLd5BUk8/gOY/hDlkfDTrtI6SnhjZPFPfgl9c1+aIv+FxYaDaOwNkdQ\nURkXUVPIxuOvf2K5iUxIlPQKTQKBgQDmZDxRcR82hb+Qb6YfTJTUtpy/fWVyiZjb\nCsqM03tJeD73MGMyiwJ2/ne9WekMSBGgK3bs80PYYLhhL/9tp/FWq5vstZqg3nyX\nr/R9MQQ2iYLFRsu7hPgEkMzt7ZLf/LRDtNDHZttP+RnKFkiWGKVgc1I1qjfjIR0A\nu/PpstJfGwKBgHlkYeFf5M3JXActPscfep0CnEw0UWyzRgRTT22yS1x6oyJvQH18\nzzGFdhmyha5QyyyArBm5c5ZPZLYhZtf7lTTC1wIEAM0OsW+5eSpAnN2XupT/Zb4/\nQbeib4Ho/NJ4bheUFssd1sSVMXuPKSRTmfe/ZcM1LTS4Zf4Q18XxTyCpAoGBAN2d\n88uflhe7Rk8optKattt6oYMtmyU3KJsjYT1fvMsqaN8cY39d6kwOcZ3p29wdgx7g\nUHCTfGKqfxG1uu1/TA5D2yQyeIBgI9dBwVufh97yHaGofRdvS6gQpaAFFHBzQ++R\nAfedgD8Ibf9Puhjvsjz6EU1f5IyN8LkhEvptMiGbAoGBAJdP/4nNLuSmDnJASFGQ\n20wU6cnAt5SbOPK67YzycCt4Cv13iWVGk4UPiLrbeHXaCczXN900lSEN5qxlA73y\nxYf/NQWSfi87UDQa/fFSXCKJMNi0g6AghwRFQF5KrGjdBigKJc1lRl0hkxV3uyHT\nyFL6QYTsDqf6JHeXG+YHRIQM\n-----END PRIVATE KEY-----\n",
-    "client_email": "test-sshosad@lunar-inn-414318.iam.gserviceaccount.com",
-    "client_id": "117400440421740588123",
-    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-    "token_uri": "https://oauth2.googleapis.com/token",
-    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/test-sshosad%40lunar-inn-414318.iam.gserviceaccount.com",
-    "universe_domain": "googleapis.com"
+    "client_email": "",
+    "private_key":""
   }
   
