@@ -67,7 +67,7 @@ async function uploadFileToDrive(jwtAuth, filePath, folderId) {
 // MASTER-FUNCTION
 async function downloadAndUploadVideoFileToDrive(fileId, folderId) {
     // Path to store downloaded file
-    const filePath = config.storage_path + Math.floor(Math.random() * 1000000000) + '.pdf'
+    const filePath = config.storage_path + Math.floor(Math.random() * 1000000000) + '.mp4'
 
     // creating authorizing jwt
     const jwtAuth = await authorizeApiiCreds()
