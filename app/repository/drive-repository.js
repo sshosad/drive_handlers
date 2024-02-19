@@ -94,7 +94,7 @@ async function uploadFileToDrive(jwtAuth, filePath, folderId) {
                 body: fs.createReadStream(filePath, { start: i, end })
             }
         })
-        console.log('File Upload in progress ',(end/fileSize)*100 + '%' );
+        console.log('File Upload in progress #',((end/fileSize)*100).toFixed(2) + '%' );
         i = end 
     }
 }
