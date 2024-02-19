@@ -1,10 +1,10 @@
 # This project will help you to download and upload files from the google drive
 
-# Once aftr clone this project, you need to create storage and .env folder in project root level
+# Once after clone this project, you need to create storage and .env folder in project root level
 
-# Before ru this project, Specify the port and storage folder path as specified below
+# Before run this project, Specify the port and storage folder path as specified below
 # PORT_NUMBER = <AVAILABLE_PORT_NUMBER>
-# STORAGE_PATH = <PATH_OF THE FOLDER_WHICH_YOU_WNAT_TO_STORE_THE_DOWNLOADED_FILE>
+# STORAGE_PATH = <PATH_OF_THE_FOLDER_WHICH_YOU_WNAT_TO_STORE_THE_DOWNLOADED_FILE>
 
 # To install dependencies npm i
 
@@ -14,7 +14,7 @@
 # Once you get the google api keys .json file just paste the json object in the drive-api-keys.json file under app/auth folder
 
 # Now Project is ready to run
-#To run the project npm start
+# To run the project npm start
 
 # Once you hit the above command, you will get a console log by saying that "App is running on port <PORT_NUMBER_SPECIFIED_IN_DOT_ENV>"
 

@@ -34,34 +34,69 @@ async function downloadFileFromDrive(fileId, jwtAuth, destinationPath) {
     // getting file as a stream
     let fileData = await drive.files.get({ fileId, alt: 'media' }, { responseType: 'stream' })
     
-    fileData.data.on('end', () => { }).pipe(writeStream)
+    await new Promise((resolve, reject) => {
+        fileData.data.on('end', () => { }).pipe(writeStream).on('finish', () => { resolve(true) })
+        fileData.data.on('error', () => { reject({ mesage: 'Failed to download the file' }) })
+    })
+    // fileData.data.on('end', () => { }).pipe(writeStream)
 
-    fileData.data.on('error', () => { throw { mesage: 'Failed to download the file' } })
+    
 }
 
 // function to upload file to drive
 async function uploadFileToDrive(jwtAuth, filePath, folderId) {
     // getting drive
     const drive = google.drive({  version: 'v3', auth: jwtAuth })
-
+    let fileSize = fs.statSync(filePath).size
+    
     // getting file extension and mimetype
     let extension = path.extname(filePath)
     let mimeType = getMimeTypeByExtension(extension)
 
+    //chunk size to upload at once
+    const chunch_size_at_once = 1024   
+   
     // upload starts here
-    await drive.files.create({
+    let output = await drive.files.create({
+        uploadType:'resumable',
         media: {
             mimeType,
-            body: fs.createReadStream(filePath)
+            body: fs.createReadStream(filePath, { start: 0, end: chunch_size_at_once })
         },
-
         requestBody: {
             name: 'test_upload_' + Math.floor(Math.random() * 1000000000) + extension,
             // parents is optional, if we provide FOLDER_ID it will insert file into specified folder, else to users drive
-            parents: [folderId]
+            parents: [folderId],
+            mimeType
         }
 
     })
+    
+    // newly created fil id
+    let fileId = output.data.id 
+
+    // looping and uploading chunks
+    for(let i = 0; i <= fileSize; i++ ) {
+        let end = ((i + chunch_size_at_once) < fileSize) ? (i + chunch_size_at_once) : fileSize
+        
+        // As first chunk uploaded while creating file, we will starts with secobd chunk
+        if(i === 0) {
+            i = chunch_size_at_once + 1
+            end = chunch_size_at_once * 2
+        }
+
+        // Updating chunks to existing file
+        await drive.files.update( {
+            fileId, 
+            uploadType:'resumable',
+            media: {
+                mimeType,
+                body: fs.createReadStream(filePath, { start: i, end })
+            }
+        })
+        console.log('File Upload in progress ',(end/fileSize)*100 + '%' );
+        i = end 
+    }
 }
 
 // MASTER-FUNCTION
